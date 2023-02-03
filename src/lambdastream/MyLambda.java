@@ -4,11 +4,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class MyLambda {
+    static Predicate<Integer> p = i -> i < 100;
 
     public static void main(String[] args) {
 
+        Predicate<Integer> or = p.and(i -> i < 200).or(i -> i % 2 == 0);
+
+        boolean test = or.test(202);
+
+        System.out.println(test);
         List<String> list = new ArrayList<>();
         list.add("1000");
         list.add("100");

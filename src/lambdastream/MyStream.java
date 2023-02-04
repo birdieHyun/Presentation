@@ -13,7 +13,7 @@ public class MyStream {
         a.add("b");
         a.add("a");
 
-        List<String> collect = a.stream().sorted().collect(Collectors.toList());
+        List<String> collect = a.stream().sorted().distinct().collect(Collectors.toList());
 
         collect.stream().forEach(System.out::println);
     }

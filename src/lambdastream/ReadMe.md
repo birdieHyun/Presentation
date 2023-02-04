@@ -7,7 +7,7 @@
 ## 목차
 
 1. 람다란?
-   예전에 자바에서 함수 타입을 표현할 때, 추상 메서드를 하나만 당믕ㄴ 인터페이스를 사용했다.  
+   예전에 자바에서 함수 타입을 표현할 때, 추상 메서드를 하나만 담은 인터페이스를 사용했다.  
    이런 인터페이스의 인스턴스를 함수객체 (function object) 라고 하여, 특정 함수나 동작을 나타내는데 사용했다.
 
 ```java
@@ -110,7 +110,10 @@ List<String> sortedList=strStream.sorted()
   
 
 - 스트림의 연산
-  - 중간연산 최종연산
+  - 중간연산 최종연산  
+    
+
+    ![IMG_BA5A801BF116-1](https://user-images.githubusercontent.com/115435784/216749087-4ef6bd6f-3917-4993-af34-432abf19cff1.jpeg)
 
 - 지연된 연산 
   - 중간 연산에서는 계산이 되지 않는다. 
@@ -149,17 +152,17 @@ List<String> sortedList=strStream.sorted()
 
 ### 이번 미션
 #### Predicate
-특정 수가 n 보다 큰지 판별하기
+특정 수가 n 보다 큰지 판별하기ㅈ
 
 ```java
 import java.util.function.Predicate;
-
+ 
 public class PredicateImpl {
     public static void main(String[] args) {
         Predicate<Integer> checkNum = i -> i > 100;
         checkNum.test(200);                                 //  i 가 100보다 큰지 확인해준다. 
-    }
-}
+    } 
+} 
 ```  
   
 Predicate 는 하나만 사용할 수도 있지만, 두 개 이상 결합도 가능하다.   

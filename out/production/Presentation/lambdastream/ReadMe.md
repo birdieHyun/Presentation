@@ -156,13 +156,13 @@ List<String> sortedList=strStream.sorted()
 
 ```java
 import java.util.function.Predicate;
- 
+
 public class PredicateImpl {
     public static void main(String[] args) {
         Predicate<Integer> checkNum = i -> i > 100;
         checkNum.test(200);                                 //  i 가 100보다 큰지 확인해준다. 
-    } 
-} 
+    }
+}
 ```  
   
 Predicate 는 하나만 사용할 수도 있지만, 두 개 이상 결합도 가능하다.   
